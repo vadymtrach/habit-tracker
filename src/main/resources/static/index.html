@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Habit Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="nav">
+    <div class="logo">HabitTracker</div>
+    <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#about">About</a>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Build habits that actually stick.</h1>
+        <p>
+            Track daily routines, build streaks, and visualize your consistency with a simple, powerful system.
+        </p>
+
+        <div class="buttons">
+            <button class="primary" onclick="startApp()">Start tracking</button>
+            <button class="secondary">Learn more</button>
+        </div>
+
+        <div class="meta">
+            No signup required • Backend-driven • Lightweight API
+        </div>
+    </div>
+
+    <div class="hero-card">
+        <div class="mock-title">Today</div>
+        <div class="mock-item">🏋️ Gym <span>🔥 5 days</span></div>
+        <div class="mock-item">📚 Read <span>🔥 2 days</span></div>
+        <div class="mock-item">💧 Water <span>🔥 12 days</span></div>
+    </div>
+</section>
+
+<section id="features" class="features">
+    <h2>Everything you need</h2>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Daily tracking</h3>
+            <p>Mark habits with a single click for any date.</p>
+        </div>
+
+        <div class="card">
+            <h3>Streak system</h3>
+            <p>Measure consistency with automatic streak calculation.</p>
+        </div>
+
+        <div class="card">
+            <h3>History logs</h3>
+            <p>Analyze past performance over any time range.</p>
+        </div>
+
+        <div class="card">
+            <h3>Simple API</h3>
+            <p>Clean REST backend built with Spring Boot.</p>
+        </div>
+    </div>
+</section>
+
+<section id="how" class="how">
+    <h2>How it works</h2>
+
+    <div class="steps">
+        <div class="step">
+            <span>1</span>
+            <p>Create a habit</p>
+        </div>
+
+        <div class="step">
+            <span>2</span>
+            <p>Mark daily completion</p>
+        </div>
+
+        <div class="step">
+            <span>3</span>
+            <p>Build streaks automatically</p>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>Habit Tracker API Project • Spring Boot + PostgreSQL</p>
+</footer>
+
+<script>
+    function startApp() {
+        window.location.href = "/app.html";
+    }
+</script>
+
+</body>
+</html>

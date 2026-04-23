@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: habit_tracker
+  datasource:
+    url: jdbc:postgresql://localhost:5432/habit_tracker
+    username: postgres
+    password: ${POSTGRES_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
