@@ -1,6 +1,9 @@
 package com.vadym.habit_tracker.habit;
 
-import org.springframework.stereotype.Controller;
+import com.vadym.habit_tracker.dto.HabitMapper;
+import com.vadym.habit_tracker.dto.habit.HabitRequest;
+import com.vadym.habit_tracker.dto.habit.HabitResponse;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -9,29 +12,31 @@ import java.util.List;
 @RequestMapping("/habits")
 public class HabitController {
     private final HabitService service;
+    private final HabitMapper mapper;
 
-    public HabitController(HabitService service) {
+    public HabitController(HabitService service, HabitMapper mapper) {
         this.service = service;
+        this.mapper = mapper;
     }
 
-    @PostMapping("")
-    public Habit createHabit(@RequestBody Habit habit){
-        return service.createHabit(habit);
+    @PostMapping
+    public HabitResponse createHabit(@Valid @RequestBody HabitRequest habitRequest){
+        return mapper.toResponse(
+                service.createHabit(mapper.toEntity(habitRequest))
+        );
     }
 
-    @GetMapping("")
-    public List<Habit> getHabits(){
-        return service.getHabits();
+    @GetMapping
+    public List<HabitResponse> getHabits(){
+        return service.getHabits().stream().
+                map(mapper::toResponse)
+                .toList();
     }
 
     @PutMapping("/{id}")
-    public Habit updateHabit(@PathVariable Long id, @RequestBody Habit habit){
-        Habit habitDb = service.getHabit(id);
-
-        habitDb.setTitle(habit.getTitle());
-        habitDb.setDescription(habit.getDescription());
-
-        return service.createHabit(habitDb);
+    public HabitResponse updateHabit(@PathVariable Long id, @Valid @RequestBody HabitRequest request){
+        Habit habit = service.updateHabit(id, request);
+        return mapper.toResponse(habit);
     }
 
     @DeleteMapping("/{id}")

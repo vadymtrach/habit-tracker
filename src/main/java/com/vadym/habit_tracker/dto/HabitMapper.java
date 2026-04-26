@@ -1,7 +1,8 @@
 package com.vadym.habit_tracker.dto;
 
+import com.vadym.habit_tracker.dto.habit.HabitRequest;
+import com.vadym.habit_tracker.dto.habit.HabitResponse;
 import com.vadym.habit_tracker.habit.Habit;
-import com.vadym.habit_tracker.habit.HabitService;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -21,5 +22,10 @@ public class HabitMapper {
         habit.setDescription(habitRequest.description());
 
         return habit;
+    }
+
+    public void updateEntity(HabitRequest request, Habit habit){
+        habit.setTitle(request.title());
+        habit.setDescription(request.description());
     }
 }
