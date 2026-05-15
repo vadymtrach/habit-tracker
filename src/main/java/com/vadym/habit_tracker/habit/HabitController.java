@@ -33,4 +33,6 @@ public class HabitController {
     public void deleteHabit(@PathVariable Long id){
         service.deleteHabit(id);
     }
+
+    //@GetMapping("{id}/streak")
 }

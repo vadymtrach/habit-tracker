@@ -2,9 +2,10 @@ package com.vadym.habit_tracker.dto;
 
 import com.vadym.habit_tracker.dto.habitLog.HabitLogRequest;
 import com.vadym.habit_tracker.dto.habitLog.HabitLogResponse;
-import com.vadym.habit_tracker.habit.Habit;
 import com.vadym.habit_tracker.habitLog.HabitLog;
+import org.springframework.stereotype.Component;
 
+@Component
 public class HabitLogMapper {
     public HabitLogResponse toResponse(HabitLog log){
         return new HabitLogResponse(log.getId(),
