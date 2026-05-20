@@ -44,4 +44,37 @@ public class HabitLogService {
 
     }
 
+    public int getCurrentStreak(Long habitId) {
+        List<HabitLog> logs = habitLogRepository.findByHabitIdOrderByDateDesc(habitId);
+        int counter = 0;
+        LocalDate expected = LocalDate.now();
+
+        for (HabitLog log : logs) {
+            if (log.getDate().equals(expected) && log.isCompleted()) {
+                counter++;
+                expected = expected.minusDays(1);
+            } else {
+                break;
+            }
+        }
+        return counter;
+    }
+
+    public int getLongestStreak(Long habitId) {
+        List<HabitLog> logs = habitLogRepository.findByHabitIdOrderByDateDesc(habitId);
+        int current = 0, longest = 0;
+        LocalDate expected = null;
+
+        for (HabitLog log : logs) {
+            if (expected == null || log.getDate().equals(expected) && log.isCompleted()) {
+                current++;
+                longest = Math.max(current, longest);
+                expected = log.getDate().minusDays(1);
+            } else if (!log.getDate().equals(expected) || !log.isCompleted()) {
+                current = log.isCompleted() ? 1 : 0;
+                expected = log.isCompleted() ? log.getDate().minusDays(1) : null;
+            }
+        }
+        return longest;
+    }
 }

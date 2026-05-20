@@ -26,4 +26,5 @@ public class HabitLogController {
                                                   @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate to){
         return service.getHabitHistory(id, from, to);
     }
+
 }
