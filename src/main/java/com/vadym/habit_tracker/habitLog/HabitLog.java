@@ -12,7 +12,7 @@ import java.time.LocalDate;
 
 @Entity
 @Table(
-        name = "habit_log",
+        name = "habit_logs",
         uniqueConstraints = {
                 @UniqueConstraint(columnNames = {"habit_id", "date"})
         }
@@ -30,7 +30,9 @@ public class HabitLog {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "habit_id")
     private Habit habit;
+
     @NotNull
     private LocalDate date;
+
     private boolean completed;
 }

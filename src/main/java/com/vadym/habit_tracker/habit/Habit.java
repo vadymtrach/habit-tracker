@@ -8,7 +8,7 @@ import lombok.Setter;
 import java.time.LocalDate;
 
 @Entity
-@Table(name="habit")
+@Table(name="habits")
 @Getter @Setter
 public class Habit {
     @Id
@@ -21,7 +21,9 @@ public class Habit {
 
     @Column(length = 255)
     private String description;
+
     private LocalDate createdAt;
+
     private boolean active;
 
 }
