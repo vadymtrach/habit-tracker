@@ -1,7 +1,7 @@
 package com.vadym.habit_tracker.habit;
 
 import com.vadym.habit_tracker.common.exception.NotFoundException;
-import com.vadym.habit_tracker.dto.HabitMapper;
+import com.vadym.habit_tracker.dto.habit.HabitMapper;
 import com.vadym.habit_tracker.dto.habit.HabitRequest;
 import com.vadym.habit_tracker.dto.habit.HabitResponse;
 import lombok.RequiredArgsConstructor;
@@ -18,8 +18,10 @@ public class HabitService {
 
     public HabitResponse createHabit(HabitRequest request){
         Habit habit = mapper.toEntity(request);
+
         habit.setActive(true);
         habit.setCreatedAt(LocalDate.now());
+
         return mapper.toResponse(repository.save(habit));
     }
 

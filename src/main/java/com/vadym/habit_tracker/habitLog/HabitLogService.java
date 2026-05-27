@@ -1,7 +1,7 @@
 package com.vadym.habit_tracker.habitLog;
 
 import com.vadym.habit_tracker.common.exception.NotFoundException;
-import com.vadym.habit_tracker.dto.HabitLogMapper;
+import com.vadym.habit_tracker.dto.habitLog.HabitLogMapper;
 import com.vadym.habit_tracker.dto.habitLog.HabitLogRequest;
 import com.vadym.habit_tracker.dto.habitLog.HabitLogResponse;
 import com.vadym.habit_tracker.habit.Habit;
