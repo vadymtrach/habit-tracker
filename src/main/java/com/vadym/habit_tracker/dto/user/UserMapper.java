@@ -1,7 +1,9 @@
 package com.vadym.habit_tracker.dto.user;
 
 import com.vadym.habit_tracker.user.User;
+import org.springframework.stereotype.Component;
 
+@Component
 public class UserMapper {
     public User toEntity(UserRequest request){
         User user = new User();
@@ -9,7 +11,6 @@ public class UserMapper {
         user.setUsername(request.getUsername());
         user.setEmail(request.getEmail());
         user.setPassword(request.getPassword());
-
         return user;
     }
 
@@ -20,6 +21,7 @@ public class UserMapper {
         response.setUsername(user.getUsername());
         response.setEmail(user.getEmail());
         response.setRole(user.getRole());
+        response.setActive(user.isActive());
 
         return response;
     }

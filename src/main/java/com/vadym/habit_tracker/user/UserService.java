@@ -43,4 +43,12 @@ public class UserService {
         return userMapper.toResponse(userRepository.save(user));
     }
 
+    public void deleteUser(Long id){
+        User user = getUserEntity(id);
+        if (!user.isActive()){
+            return;
+        }
+        user.setActive(false);
+        userRepository.save(user);
+    }
 }
