@@ -1,4 +1,4 @@
-package com.vadym.habit_tracker.user;
+package com.vadym.habit_tracker.user.entity;
 
 import jakarta.persistence.*;
 import lombok.*;

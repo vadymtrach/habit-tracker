@@ -1,7 +1,8 @@
-package com.vadym.habit_tracker.user;
+package com.vadym.habit_tracker.user.controller;
 
-import com.vadym.habit_tracker.dto.user.UserRequest;
-import com.vadym.habit_tracker.dto.user.UserResponse;
+import com.vadym.habit_tracker.user.dto.UserRequest;
+import com.vadym.habit_tracker.user.dto.UserResponse;
+import com.vadym.habit_tracker.user.service.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
