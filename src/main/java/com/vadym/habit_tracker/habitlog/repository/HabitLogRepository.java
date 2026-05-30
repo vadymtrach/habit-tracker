@@ -1,5 +1,6 @@
-package com.vadym.habit_tracker.habitlog;
+package com.vadym.habit_tracker.habitlog.repository;
 
+import com.vadym.habit_tracker.habitlog.entity.HabitLog;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.time.LocalDate;

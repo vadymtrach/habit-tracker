@@ -1,6 +1,6 @@
-package com.vadym.habit_tracker.habitlog;
+package com.vadym.habit_tracker.habitlog.entity;
 
-import com.vadym.habit_tracker.habit.Habit;
+import com.vadym.habit_tracker.habit.entity.Habit;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;

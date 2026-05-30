@@ -1,11 +1,13 @@
-package com.vadym.habit_tracker.habitlog;
+package com.vadym.habit_tracker.habitlog.service;
 
 import com.vadym.habit_tracker.common.exception.NotFoundException;
-import com.vadym.habit_tracker.dto.habitlog.HabitLogMapper;
-import com.vadym.habit_tracker.dto.habitlog.HabitLogRequest;
-import com.vadym.habit_tracker.dto.habitlog.HabitLogResponse;
-import com.vadym.habit_tracker.habit.Habit;
-import com.vadym.habit_tracker.habit.HabitRepository;
+import com.vadym.habit_tracker.habitlog.mapper.HabitLogMapper;
+import com.vadym.habit_tracker.habitlog.dto.HabitLogRequest;
+import com.vadym.habit_tracker.habitlog.dto.HabitLogResponse;
+import com.vadym.habit_tracker.habit.entity.Habit;
+import com.vadym.habit_tracker.habit.repository.HabitRepository;
+import com.vadym.habit_tracker.habitlog.entity.HabitLog;
+import com.vadym.habit_tracker.habitlog.repository.HabitLogRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
