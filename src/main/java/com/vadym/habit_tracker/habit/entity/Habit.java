@@ -1,4 +1,4 @@
-package com.vadym.habit_tracker.habit;
+package com.vadym.habit_tracker.habit.entity;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;

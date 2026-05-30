@@ -1,9 +1,10 @@
-package com.vadym.habit_tracker.habit;
+package com.vadym.habit_tracker.habit.controller;
 
-import com.vadym.habit_tracker.dto.habit.HabitRequest;
-import com.vadym.habit_tracker.dto.habit.HabitResponse;
-import com.vadym.habit_tracker.dto.streak.StreakResponse;
-import com.vadym.habit_tracker.habitlog.HabitLogService;
+import com.vadym.habit_tracker.habit.dto.HabitRequest;
+import com.vadym.habit_tracker.habit.dto.HabitResponse;
+import com.vadym.habit_tracker.habit.dto.StreakResponse;
+import com.vadym.habit_tracker.habit.service.HabitService;
+import com.vadym.habit_tracker.habitlog.service.HabitLogService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;

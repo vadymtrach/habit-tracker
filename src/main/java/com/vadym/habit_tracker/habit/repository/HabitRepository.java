@@ -1,5 +1,6 @@
-package com.vadym.habit_tracker.habit;
+package com.vadym.habit_tracker.habit.repository;
 
+import com.vadym.habit_tracker.habit.entity.Habit;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

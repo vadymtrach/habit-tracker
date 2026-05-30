@@ -1,9 +1,11 @@
-package com.vadym.habit_tracker.habit;
+package com.vadym.habit_tracker.habit.service;
 
 import com.vadym.habit_tracker.common.exception.NotFoundException;
-import com.vadym.habit_tracker.dto.habit.HabitMapper;
-import com.vadym.habit_tracker.dto.habit.HabitRequest;
-import com.vadym.habit_tracker.dto.habit.HabitResponse;
+import com.vadym.habit_tracker.habit.mapper.HabitMapper;
+import com.vadym.habit_tracker.habit.dto.HabitRequest;
+import com.vadym.habit_tracker.habit.dto.HabitResponse;
+import com.vadym.habit_tracker.habit.entity.Habit;
+import com.vadym.habit_tracker.habit.repository.HabitRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
