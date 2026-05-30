@@ -3,7 +3,7 @@ package com.vadym.habit_tracker.habit;
 import com.vadym.habit_tracker.dto.habit.HabitRequest;
 import com.vadym.habit_tracker.dto.habit.HabitResponse;
 import com.vadym.habit_tracker.dto.streak.StreakResponse;
-import com.vadym.habit_tracker.habitLog.HabitLogService;
+import com.vadym.habit_tracker.habitlog.HabitLogService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;

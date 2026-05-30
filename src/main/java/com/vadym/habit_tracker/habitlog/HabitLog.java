@@ -1,4 +1,4 @@
-package com.vadym.habit_tracker.habitLog;
+package com.vadym.habit_tracker.habitlog;
 
 import com.vadym.habit_tracker.habit.Habit;
 import jakarta.persistence.*;

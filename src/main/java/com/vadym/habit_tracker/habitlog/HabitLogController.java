@@ -1,7 +1,7 @@
-package com.vadym.habit_tracker.habitLog;
+package com.vadym.habit_tracker.habitlog;
 
-import com.vadym.habit_tracker.dto.habitLog.HabitLogRequest;
-import com.vadym.habit_tracker.dto.habitLog.HabitLogResponse;
+import com.vadym.habit_tracker.dto.habitlog.HabitLogRequest;
+import com.vadym.habit_tracker.dto.habitlog.HabitLogResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;

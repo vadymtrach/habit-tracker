@@ -1,9 +1,9 @@
-package com.vadym.habit_tracker.habitLog;
+package com.vadym.habit_tracker.habitlog;
 
 import com.vadym.habit_tracker.common.exception.NotFoundException;
-import com.vadym.habit_tracker.dto.habitLog.HabitLogMapper;
-import com.vadym.habit_tracker.dto.habitLog.HabitLogRequest;
-import com.vadym.habit_tracker.dto.habitLog.HabitLogResponse;
+import com.vadym.habit_tracker.dto.habitlog.HabitLogMapper;
+import com.vadym.habit_tracker.dto.habitlog.HabitLogRequest;
+import com.vadym.habit_tracker.dto.habitlog.HabitLogResponse;
 import com.vadym.habit_tracker.habit.Habit;
 import com.vadym.habit_tracker.habit.HabitRepository;
 import lombok.RequiredArgsConstructor;

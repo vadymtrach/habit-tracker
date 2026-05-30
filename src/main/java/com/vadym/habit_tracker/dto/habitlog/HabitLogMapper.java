@@ -1,6 +1,6 @@
-package com.vadym.habit_tracker.dto.habitLog;
+package com.vadym.habit_tracker.dto.habitlog;
 
-import com.vadym.habit_tracker.habitLog.HabitLog;
+import com.vadym.habit_tracker.habitlog.HabitLog;
 import org.springframework.stereotype.Component;
 
 @Component

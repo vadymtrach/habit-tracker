@@ -1,4 +1,4 @@
-package com.vadym.habit_tracker.habitLog;
+package com.vadym.habit_tracker.habitlog;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

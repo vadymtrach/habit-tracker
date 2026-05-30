@@ -1,4 +1,4 @@
-package com.vadym.habit_tracker.dto.habitLog;
+package com.vadym.habit_tracker.dto.habitlog;
 
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PastOrPresent;

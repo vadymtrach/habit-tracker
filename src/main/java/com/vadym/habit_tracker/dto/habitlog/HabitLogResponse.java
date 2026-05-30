@@ -1,4 +1,4 @@
-package com.vadym.habit_tracker.dto.habitLog;
+package com.vadym.habit_tracker.dto.habitlog;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
